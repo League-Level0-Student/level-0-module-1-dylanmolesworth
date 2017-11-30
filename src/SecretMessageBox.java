@@ -4,6 +4,9 @@
 
 import javax.swing.JOptionPane;
 
+import org.jointheleague.graphical.robot.KeyboardAdapter;
+import org.jointheleague.graphical.robot.Robot;
+
 /**
  * Secret Message Box / Secure Messaging System
  * 
@@ -14,6 +17,34 @@ import javax.swing.JOptionPane;
  */
 
 public class SecretMessageBox {
+	
+	public static void main(String[] args) {
+		
+		String pass = "1234";
+		
+		String awnswer = JOptionPane.showInputDialog("What is the password?");
+		
+		JOptionPane.showMessageDialog(null, "you can only see the secret message if you can guess the passcode.");
+		
+		if(awnswer.equals("1234")) {
+			
+			JOptionPane.showMessageDialog(null, "You cracked the code!"); 
+			JOptionPane.showMessageDialog(null, "Here is your secret massage: Good Job!"); 
+			JOptionPane.showMessageDialog(null, "Im also giving you a gift!"); 
+			Robot gift = new Robot();
+			gift.addKeyboardAdapter(new KeyboardAdapter());
+			gift.setSpeed(25);
+			gift.penDown();
+			gift.setPenWidth(20);
+			gift.setPenColor(90, 40, 70);
+			
+		}
+		
+		else{JOptionPane.showMessageDialog(null, "INTRUDER"); 
+		
+		}
+		
+	}
 
 	// 0. Make a main method and put steps 1-5 inside it
 	

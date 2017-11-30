@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 //    Copyright (c) The League of Amazing Programmers 2013-2017
 //    Level 0
 
@@ -6,18 +8,51 @@
 public class TheRiddler {
 
 	public static void main(String[] args) {
+		
+		int score = 0;
+		
+		String riddle = JOptionPane.showInputDialog(null, "Who makes it, has no need of it. " + 
+				"Who buys it, has no use for it. " + 
+				"Who uses it can neither see nor feel it. " + 
+				"What is it?");
+	
+		if(riddle.equals("a coffin")) {
+			
+			JOptionPane.showMessageDialog(null, "Correct!");
+			
+			score = score + 5;
+			
+		}
+		
+		else{JOptionPane.showMessageDialog(null, "wrong the awnswer is a coffin");
+		
+		score = score - 1;
+		
+		}
 
-		// 1. Make a variable to hold the score
+		
+		
+		JOptionPane.showMessageDialog(null, "You have "+ score + " points");
+		
+		
+		
+		String riddle2 = JOptionPane.showInputDialog(null, "What can travel around the world while staying in a corner?");
 
-		// 3. Ask the user a riddle. Here are some ideas: bit.ly/some-riddles
-
-		// 4. If they got the answer right, pop up "correct!" and increase the score by one
-
-		// 5. Otherwise, say "wrong" and tell them the answer
-
-		// 6. Add some more riddles
-
-		// 2. Make a pop up to show the score.
+		if(riddle2.equals("a stamp")) {
+			
+			JOptionPane.showMessageDialog(null, "Correct!");
+			
+			score = score + 5;
+			
+		}
+		
+		else{JOptionPane.showMessageDialog(null, "wrong the awnswer is a stamp");
+		
+		score = score - 1;
+		
+		}
+		
+		JOptionPane.showMessageDialog(null, "You have "+ score + " points");
 		
 	}
 }
