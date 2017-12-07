@@ -12,7 +12,8 @@
 	import javax.sound.sampled.AudioSystem; 
 	import javax.sound.sampled.Clip;
 
-    import org.jointheleague.graphical.robot.Robot;
+import org.jointheleague.graphical.robot.KeyboardAdapter;
+import org.jointheleague.graphical.robot.Robot;
 	
 	public class RobotInSpace implements KeyEventDispatcher {
 		
@@ -21,8 +22,16 @@
 	/*  Make the Robot move around the screen when the arrow keys are pressed... */
 	private void moveRobot(int keyPressed) {
 	    // 0. Print out the keyPressed variable and write down the numbers for each arrow key
+		
+		System.out.println(keyPressed);
 
 	    // 1. If the up arrow is pressed, move the Robot up the screen.
+		
+		if(keyPressed == 38) {
+			
+			rob.move(90);
+			
+		}
 
 	    // 2. If the down arrow is pressed, move the Robot down.
 
